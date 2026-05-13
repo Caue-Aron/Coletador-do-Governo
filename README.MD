@@ -56,7 +56,7 @@ Biblioteca usada para fazer requisições HTTP. Foi percebido que o site onde es
 
 #### Argparse
 
-Foi usado a biblioteca argparse para interface CLI. A biblioteca é notória por sua simplicidade e facilidade de uso, permitindo diversas funcionalidades com pouco código, como help section automática. Também é uma linguagem nativa do Python.
+Foi usado a biblioteca argparse para interface CLI. A biblioteca é notória por sua simplicidade e facilidade de uso, permitindo diversas funcionalidades com pouco código, como help section automática. Também é uma biblioteca nativa do Python.
 
 #### Logging
 
@@ -84,7 +84,9 @@ Sobre as funções: todas encapsulam tarefas relativamente e auto explicativas -
 
 ## Instalação
 
-Clone o projeto para sua máquina local, crie uma venv python 3.9+ (mandatório) e instale as bibliotecas instaladas externamente através do requirements.txt:
+Clone o projeto para sua máquina local, crie uma venv python 3.9+ (mandatório) e instale as dependências do projeto através do requirements.txt:
+
+`python -m venv .venv`
 
 `python -m pip install -r requirements.txt`
 

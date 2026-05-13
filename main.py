@@ -90,8 +90,7 @@ def download_zip(url:str, filename:str) -> None:
             raise
 
         except requests.ConnectionError as error:
-            logging.exception(f'Erro de conexão')
-            raise
+            logging.warning(f'Erro de conexão na tentativa {tentativa + 1}')
 
         except requests.Timeout as error:
             logging.warning(f'Tempo limite excedido na tentativa {tentativa + 1}')
@@ -100,7 +99,8 @@ def download_zip(url:str, filename:str) -> None:
             logging.exception(f'Erro inesperado: {error}')
             raise
 
-    raise logging.exception('Falha após múltiplas tentativas')
+    logging.exception('Falha após múltiplas tentativas')
+    raise RuntimeError('Falha após múltiplas tentativas')
 
 def extrai_zip(nome_zip:str, folder:str) -> None:
     logging.info('Extraindo arquivos ZIP')
